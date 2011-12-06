@@ -801,7 +801,7 @@ Raphael.g = {
             t = ends.to,
             i = ends.power,
             j = 0,
-            txtattr = { font: "11px 'Fontin Sans', Fontin-Sans, sans-serif" },
+            txtattr = { font: axisfont, fill: axisfontcolor },
             text = paper.set(),
             d;
 
@@ -858,9 +858,10 @@ Raphael.g = {
             }
         }
 
-        var res = paper.path(path);
+        var res = paper.path(path).attr({stroke: axislinecolor || "#000000"});
 
         res.text = text;
+
         res.all = paper.set([res, text]);
         res.remove = function () {
             this.text.remove();

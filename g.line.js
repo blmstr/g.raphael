@@ -73,6 +73,10 @@
             dots = null,
             chart = paper.set(),
             path = [];
+            axisfont = opts.axisfont || "11px 'Fontin Sans', Fontin-Sans, sans-serif";
+            axislinecolor = opts.axislinecolor || "#000000";
+            axisfontcolor = opts.axisfontcolor || "#000000";
+            
 
         for (var i = 0, ii = valuesy.length; i < ii; i++) {
             len = Math.max(len, valuesy[i].length);
